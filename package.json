@@ -1,0 +1,25 @@
+{
+  "name": "book-app-redo",
+  "version": "1.0.0",
+  "description": "restarting CodeFellows book app project from scratch after class",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arsummers/book-app-redo.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arsummers/book-app-redo/issues"
+  },
+  "homepage": "https://github.com/arsummers/book-app-redo#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "superagent": "^5.0.2"
+  }
+}
