@@ -1,5 +1,6 @@
 'use strict';
 
+/*
 //basic dependencies
 const express = require('express');
 const superagent = require('superagent');
@@ -12,17 +13,21 @@ const PORT = process.env.PORT;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+//prep for server side templating
 app.set('view engine', 'ejs');
 
+//routes
 app.get('/', new_search);
 
 app.post('/searches', create_search);
 
+//catches bad routes
 app.get('*', (request, response) => response.status(404).send('womp womp bad route'));
 
 app.listen(PORT, () => console.log(`Book app listening on port ${3000}`));
 
-function Book (info) {
+//helper functions
+function Book(info) {
   this.title = info.title;
 }
 
@@ -46,8 +51,9 @@ function create_search(request, response){
     .then(results => response.render('pages/searches/show', { search_results : results}));
 }
 
+*/
 //=================
-/*
+
 // Application Dependencies
 const express = require('express');
 const superagent = require('superagent');
@@ -109,4 +115,4 @@ function createSearch(request, response) {
   // how will we handle errors?
 }
 
-*/
+
