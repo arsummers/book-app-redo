@@ -18,9 +18,9 @@ app.set('view engine', 'ejs');
 
 //routes
 //renders page with search form
-app.get('/', newSearch);
+app.get('/', new_search);
 
-app.post('/searches', createSearch);
+app.post('/searches', create_search);
 
 //catches bad routes
 app.get('*', (request, response) => response.status(404).send('womp womp bad route'));
@@ -33,11 +33,11 @@ function Book(info) {
   this.title = info.title;
 }
 
-function newSearch(request, response){
+function new_search(request, response){
   response.render('pages/index');
 }
 
-function createSearch(request, response){
+function create_search(request, response){
   let url = 'https://www.googleapis.com/books/v1/volumes?q=';
 
   console.log(request.body);
@@ -49,6 +49,6 @@ function createSearch(request, response){
   console.log(url);
 
   superagent.get(url)
-    .then(apiResponse => apiResponse.body.items.map(book_result => new Book(book_result.volumeInfo)))
+    .then(api_response => api_response.body.items.map(book_result => new Book(book_result.volumeInfo)))
     .then(results => response.render('pages/searches/show', { search_results : results}));
 }
