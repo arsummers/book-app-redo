@@ -52,3 +52,17 @@ function create_search(request, response){
     .then(api_response => api_response.body.items.map(book_result => new Book(book_result.volumeInfo)))
     .then(results => response.render('pages/searches/show', { search_results : results}));
 }
+
+/*
+
+function Book(info) {
+  const placeholderImage = 'https://i.imgur.com/J5LVHEL.jpg';
+  this.authors = info.authors || 'No author available';
+  this.title = info.title || 'No title available';
+  this.description = info.description || 'No description available';
+  this.isbn = info.industryIdentifiers[0].identifier || 'No ISBN available';
+  this.thumbnail = info.imageLinks ? info.imageLinks.thumbnail.replace('http://', 'https://') : placeholderImage;
+}
+
+
+*/
