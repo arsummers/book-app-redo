@@ -28,10 +28,6 @@ app.get('*', (request, response) => response.status(404).send('womp womp bad rou
 app.listen(PORT, () => console.log(`Book app listening on port ${3000}`));
 
 //helper functions
-function Book(info) {
-  const placeholderImage = 'https://i.imgur.com/J5LVHEL.jpg';
-  this.title = info.title;
-}
 
 function new_search(request, response){
   response.render('pages/index');
@@ -53,16 +49,10 @@ function create_search(request, response){
     .then(results => response.render('pages/searches/show', { search_results : results}));
 }
 
-/*
-
 function Book(info) {
   const placeholderImage = 'https://i.imgur.com/J5LVHEL.jpg';
-  this.authors = info.authors || 'No author available';
-  this.title = info.title || 'No title available';
-  this.description = info.description || 'No description available';
-  this.isbn = info.industryIdentifiers[0].identifier || 'No ISBN available';
+  this.title = info.title;
+  this.authors = info.authors || 'no author available';
+  this.description = info.description || 'none available';
   this.thumbnail = info.imageLinks ? info.imageLinks.thumbnail.replace('http://', 'https://') : placeholderImage;
 }
-
-
-*/
