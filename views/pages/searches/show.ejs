@@ -7,6 +7,13 @@
   <title>books!</title>
 </head>
 <body>
-  give me blue or pink and I'll choose the blackest
+  <main>
+    <% search_results.forEach(book => { %>
+      <img src="<%=book.thumbnail%>">
+      <%=book.title %>
+      <%=book.authors %>
+      <%=book.description %>
+    <% }); %>
+  </main>
 </body>
 </html>
