@@ -36,13 +36,9 @@ function new_search(request, response){
 function create_search(request, response){
   let url = 'https://www.googleapis.com/books/v1/volumes?q=';
 
-  console.log(request.body);
-
   if (request.body.search[1] === 'title') { url += `+intitle:${request.body.search[0]}`; }
 
   if (request.body.search[1] === 'author') { url += `+inauthor:${request.body.search[0]}`; }
-
-  console.log(url);
 
   superagent.get(url)
     .then(api_response => api_response.body.items.map(book_result => new Book(book_result.volumeInfo)))
