@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/modules.css">
+
+  <title>books!</title>
+</head>
+<body>
+  <main>
+    <h1>Here are the results of your search</h1>
+    <% search_results.forEach(book => { %>
+      <div class="book-container">
+        <img src="<%=book.thumbnail%>">
+      <h3>
+        <%=book.title %>
+      </h3>
+      <h4>
+        <%=book.authors %>
+      </h4>
+      <p>
+        <%=book.description %>
+      </p>
+    </div>
+    <% }); %>
+  </main>
+</body>
+</html>

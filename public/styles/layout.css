@@ -1,0 +1,10 @@
+h1{
+  max-width: 200px;
+  margin: auto;
+}
+.book-container{
+  border: 1px black solid;
+  box-sizing: border-box;
+  max-width: 200px;
+  margin: auto;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <title>Book App redo</title>
+</head>
+<body>
+  <main>
+
+    <h4>do you a search friend</h4>
+
+    <form action="/searches" method="post">
+    <input type="text" name="search" placeholder="enter a thing" required>
+
+    <fieldset>
+      <label for="title">
+        <span>Title time</span>
+        <input type="radio" name="search" value="title" required>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <label for="author">
+        <span>Author time</span>
+        <input type="radio" name="search" value="author" required>
+      </labe>
+    </fieldset>
+    <button type="submit">
+      do you a search for real this time
+    </button>
+  </form>
+  </main>
+</body>
+</html>
