@@ -1,4 +1,9 @@
 
+h1{
+  font-size: 2em;
+  font-family: 'Reenie Beanie', cursive;
+
+}
 img{
   padding: 1em;
 }
@@ -6,6 +11,7 @@ img{
 h3{
   font-size: 1.5em;
   padding: 1em;
+  font-family: 'Reenie Beanie', cursive;
 }
 
 h4{
