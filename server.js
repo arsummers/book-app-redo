@@ -22,8 +22,8 @@ app.get('/', new_search);
 
 app.post('/searches', create_search);
 
-//catches bad routes
-app.get('*', (request, response) => response.status(404).send('womp womp bad route'));
+//catches bad routes, redirects to error page
+app.use('*', (request, response) => response.render('./pages/error'));
 
 app.listen(PORT, () => console.log(`Book app listening on port ${3000}`));
 
